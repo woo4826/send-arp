@@ -39,7 +39,7 @@ void usage() {
 Mac get_sender_mac(pcap_t* handle, Mac attacker_mac, Ip sender_ip, Ip target_ip) {
     EthArpPacket packet;
 
-    packet.eth_.dmac_ = Mac("FF:FF:FF:FF:FF:FF");  // 브로드캐스트 MAC 주소
+    packet.eth_.dmac_ = Mac("FF:FF:FF:FF:FF:FF");  
     packet.eth_.smac_ = attacker_mac;
     packet.eth_.type_ = htons(EthHdr::Arp);
 
